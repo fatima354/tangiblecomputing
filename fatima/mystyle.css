@@ -1,0 +1,98 @@
+*{margin:0;
+padding: 0;
+font-family: fantasy; 
+font-size: 3vh;
+font-weight: bold;
+}
+
+
+header{
+	background-image: url("tree11.jpg");
+	height:43vh;
+	
+	background-position: center;
+	
+}
+
+h4{background-image: url("white.jpg");
+	height:8.8vh;
+margin-top: -460px;
+margin-right: 900px;}
+
+body{background-image: url(sparkle2.gif);
+	background-color: #D4C2D7;
+
+
+}
+
+
+
+
+ul{ float: right;
+list-style-type: none; 
+
+margin-right: 12px;
+
+ }
+
+ ul li{display:inline-block; 
+ }
+
+ ul li a{ 
+ text-decoration: none;
+ color:#fff;
+ padding:1px 200px;
+ border:1px solid transparent; 
+transition:0.6s ease;
+margin-right: 400px;
+
+}
+
+  ul li a:hover{ 
+ background-color: #F8EBFB;
+ color: #000;}
+
+  ul li.active a { 
+ background-color:#FFFFFF;
+ color: #000;
+}
+
+
+
+.weeks{max-width: 1200px;
+margin: 123px;
+
+
+}
+
+
+.myname{
+	color: #000000;
+ position: absolute;
+	top:55%;
+	left:50%;
+	transform: translate(-50%,-50%);
+margin-right: : 123px;
+}
+
+
+p{background-color:rgba(255,255,255,0.5);
+ border:20px solid;
+ border-color: #fff;
+ }
+
+
+.topic{
+
+	color: #000000;
+ position: absolute;
+	margin-top: 1400px;
+	margin-left:1999px;
+	left:70px;
+	transform: translate(-50%,-50%);
+	font-size: 40px;
+	  }
+
+
+
+}
