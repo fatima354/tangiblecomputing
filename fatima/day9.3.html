@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> fatimas website </title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:ital,wght@0,300;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mystyle.css">
+
+
+
+      
+  
+<body style="background-color:powderblue;">
+
+</body>
+
+    
+  </head>
+  <body>
+
+    <div>
+      <h2> MuW201 Tangible Computing</h2>
+      <img style="width: 19%" src="blank.png"><img style="width: 19%" src="butterfly2.png"><img style="width: 19%" src="blank.png"> <img style="width: 19%" src="butterfly2.png"><img style="width: 19%" src="blank.png"> 
+   
+      <br>
+      
+      <h2>  Fatima_Alhalyan  </h2>
+<hr>
+      <br>
+
+check it out for yourself! <a href="https://editor.p5js.org/tambotams/sketches/GTZD9-YzS">link text</a>
+<br>
+<img style="width: 41.2%" src="angel.png"> 
+<img style="width: 24.3%" src="angel2.png">
+
+
+      <br>
+ 
+let img0
+let img1
+let img2
+let img3
+let img4
+
+
+let posX=0
+let posY=0
+let size1=100
+let size2=200
+function preload(){
+  img0=loadImage('cloud1.png')
+ img1=loadImage('f1.PNG')
+  img2=loadImage('f3.PNG')
+  img3=loadImage('stars.png')
+      capture = createCapture();
+  capture.hide()
+ 
+  
+
+}
+
+function setup() {
+  createCanvas(1000, 1000);
+}
+
+function draw() {
+ background(capture.get())
+  image(img0,posX,20,800,400);
+  image(img0,-posX,20,400,200);
+    image(img0,-posX,20,1000,800);
+  image(img0,posY,600,500,300);
+  image(img1,posY,posX,size1+300,size2+600);
+
+  image(img3,-posX,posY,300,400);
+  image(img3,-posX,-posY,600,900);
+  image(img3,posY,posY,600,900);
+    image(img3,-posX,posY,600,900);
+  
+  posX
+  
+    if (posX > width || posY > height) {
+    posX = 0
+    posY = 0
+    size1 = 100
+    size2 = 200
+
+  } else {
+    posX += 0.9
+    posY += 0.9
+    size1 += 0.2
+    size2 -=0.25
+  }
+  
+
+}
+<br>
+
+<p><a href="index.html" > HOMEPAGE </a></p>

@@ -20,17 +20,39 @@
     <div>
       <h2> MuW201 Tangible Computing</h2>
       <img style="width: 19%" src="blank.png"><img style="width: 19%" src="butterfly2.png"><img style="width: 19%" src="blank.png"> <img style="width: 19%" src="butterfly2.png"><img style="width: 19%" src="blank.png"> 
-      <hr>
+   
       <br>
       
       <h2>  Fatima_Alhalyan  </h2>
 <hr>
       <br>
-<iframe src="https://www.openprocessing.org/sketch/974964/embed/?plusEmbedHash=NDNhYTY2MmUxZTFkOTY1NTkxMzAzMTI0OGEwYjgwZThkNTAxYjVlOWZlNjQxOTliMjczMzQ1NmFiOGE5MjIwNjAzZGVjMjM5NWEzZjM5NjcyOGI1MmM1ODVmZmU2ZGFmZTE3NDcxZmUzNWFhYTg2NGY5MGE5MmRkNGU5MTIwYmY4WnBHUXg1ckJqUHV1M3hncmUvOVcyczI1em1vYjduQS82V09wcWdiRnFwcmlRbXlnbHU1RkI4SXVrOFgxVDJjeG5ZMG0zZUM2SEZIUnNKZDdLQkFTUT09&plusEmbedTitle=true" width="800" height="700"></iframe>
 
-<hr>
+check it out for yourself! <a href="https://editor.p5js.org/tambotams/sketches/I8fjvo_Qa">link text</a>
+<br>
+<img style="width: 20.6%" src="fog.png"> 
+<img style="width: 24.9%" src="fog2.png">
+
+
       <br>
+  
+let img;
 
-<p><a href="index.html" > HOMEPAGE </a></p>
+function setup() {
+  createCanvas(1000, 1000);
+  img0 = loadImage('starryfog.png');
+
+  
+    capture = createCapture();
+  capture.hide(); 
+}
+
+function draw() {
+ background(capture.get())
+  image(img0,-999,-999,3922,3292);
+
+  
+  
+}
+<br>
 
 <p><a href="index.html" > HOMEPAGE </a></p>

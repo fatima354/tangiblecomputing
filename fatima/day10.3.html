@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> fatimas website </title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:ital,wght@0,300;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mystyle.css">
+
+
+
+      
+  
+<body style="background-color:powderblue;">
+
+</body>
+
+    
+  </head>
+  <body>
+
+    <div>
+      <h2> MuW201 Tangible Computing</h2>
+      <img style="width: 19%" src="blank.png"><img style="width: 19%" src="butterfly2.png"><img style="width: 19%" src="blank.png"> <img style="width: 19%" src="butterfly2.png"><img style="width: 19%" src="blank.png"> 
+   
+      <br>
+      
+      <h2>  Fatima_Alhalyan  </h2>
+<hr>
+      <br>
+
+check it out for yourself! <a href="https://editor.p5js.org/tambotams/sketches/-OdvjQyYn">link text</a>
+<br>
+<img style="width: 24.2%" src="flowerscreenshots.png"> 
+<img style="width: 18.4%" src="flowerscreenshots2.png">
+
+
+      <br>
+ 
+let f_x
+let f_y
+let f_r
+let s_h
+let video;
+function setup() {
+  video = createCapture(VIDEO);
+  video.size(width, height);
+  video.hide();
+  createCanvas(400, 400);
+   background(225);
+ // f_x=200;
+ // f_y=200;
+//  f_r=50;
+ // s_h=50;
+}
+
+function drawRect(x,y,d,r,g,b) {
+   image(video, 0, 0, width, height);
+ strokeWeight(1) 
+ fill(255,255,0)
+ ellipse(x,y,d)
+ fill(r,g,b) 
+ strokeWeight(1)
+ ellipse(x-50,y,d-5)
+ ellipse(x+50,y,d-5)
+ ellipse(x+25,y+42,d-5)
+ ellipse(x+25,y-42,d-5)
+ ellipse(x-25,y+42,d-5)
+ ellipse(x-25,y-42,d-5)
+
+ 
+  
+  
+}
+
+function mousePressed()
+{
+  for(let i=0;i<20;i++){
+  drawRect(mouseX,mouseY,random(50, 80),random(i,255),random(0,255),random(110,255))
+  }
+
+
+}
+<br>
+
+<p><a href="index.html" > HOMEPAGE </a></p>

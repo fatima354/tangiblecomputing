@@ -20,15 +20,92 @@
     <div>
       <h2> MuW201 Tangible Computing</h2>
       <img style="width: 19%" src="blank.png"><img style="width: 19%" src="butterfly2.png"><img style="width: 19%" src="blank.png"> <img style="width: 19%" src="butterfly2.png"><img style="width: 19%" src="blank.png"> 
-      <hr>
+   
       <br>
       
       <h2>  Fatima_Alhalyan  </h2>
 <hr>
       <br>
-<iframe src="https://www.openprocessing.org/sketch/985288/embed/?plusEmbedHash=NmY4ODRiZDBmNjVmOWEyNjkwZGUzZWZkMjAyMzcwOTc2MTkyYmY0YjY3M2YwOTg1OTQyYWVhM2VjN2Q4ZDBjNzE5ZjU1MTU2OWU5M2Q1YTg4NGJlZDRlYjViZDhiMTJiNjUxNzBjZTVkZWY5ZmM2NDJkZWE2ZTM1ZjgzNTBhNTVhUndFSFVpZ1d6OHZVRW1rQmhsOHpabmxQR05rczlLRjZIWW8zTVAvSmdpanhuUi9jOTlJbitaT0dESHVqdmROQmN2Q2Q2U01hV01LOWlhZGpySDdkUT09&plusEmbedTitle=true" width="800" height="700"></iframe>
 
-<hr>
+check it out for yourself! <a href="https://www.openprocessing.org/sketch/985288">link text</a>
+<br>
+<img style="width: 19.9%" src="bubble.png"> 
+<img style="width: 26.5%" src="bubble2.png">
+
+
       <br>
+ var video;
+let arr = []
+let capture
+function setup(){
+video = createCapture(VIDEO);
+capture = createCapture();
+  capture.hide()
+  video.hide();
+  let canvas = createCanvas(1000, 1000,WEBGL);   
+  // canvas.parent('p5container');
+
+    for (var i = 0; i < 200; i++){
+
+    let x = random(-width/2,width/2)
+    let y = random(-height/2,height/2)
+    let r = random(2,10)
+
+    arr.push([x,y,r])
+
+
+  }
+
+
+}
+
+
+function draw(){
+
+  
+  image(video,0,0);
+  tint('pink')
+
+  for (var i = 0; i < arr.length; i++){
+
+    let pixel = arr[i]
+    let r = pixel[2] - 0.1 
+
+    if (r < 0){
+      r = random(1,20)
+    }
+
+
+    drawPixel(pixel[0],pixel[1],r)
+
+    arr[i][2] = r 
+
+  }
+
+
+
+}
+
+function drawPixel(x,y,r){
+
+   push()
+  translate(x,y)
+
+
+  noStroke()
+
+  fill(255,255,255)
+
+  sphere(r)
+
+  fill(255,155,215,25)
+
+  for (var i = 0; i < 50; i+=10){
+
+    sphere(r+i)
+
+
+  }
+<br>
 
 <p><a href="index.html" > HOMEPAGE </a></p>

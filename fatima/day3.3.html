@@ -20,15 +20,80 @@
     <div>
       <h2> MuW201 Tangible Computing</h2>
       <img style="width: 19%" src="blank.png"><img style="width: 19%" src="butterfly2.png"><img style="width: 19%" src="blank.png"> <img style="width: 19%" src="butterfly2.png"><img style="width: 19%" src="blank.png"> 
-      <hr>
+   
       <br>
       
       <h2>  Fatima_Alhalyan  </h2>
 <hr>
       <br>
-<iframe src="https://www.openprocessing.org/sketch/984416/embed/?plusEmbedHash=Y2NhYzNhZGQxZWY2MDFiYWFlZDg1MDBhMmE5NWIwYmUwY2M2ZjM1MzcwYjRmM2NkMGQ1ZTRmZDVhZjU3ZTBjZTIyOGRkNjNhODdlZmRlMTAyZTZiY2ZjN2ViODdlZTNkNGI0ODY0MmU5YzA5YjhhZWVhNDkwMmYyZjNhMjg5MjlYT2trQW9HWmZYM0RBcnFnazNwK2xoT2NrN20vdEFhdW1ub3Vlc3RQRTBnUzB0N1hJeGhUbXB1a3ZvSndKZHJTaEhTQTF5OVZEVmsxL1loZUZlTVpRdz09&plusEmbedTitle=true" width="800" height="700"></iframe>
 
-<hr>
+check it out for yourself! <a href="https://www.openprocessing.org/sketch/984416">link text</a>
+<br>
+<img style="width: 19.9%" src="rotatingflower.png"> 
+<img style="width: 25.3%" src="rotatingflower2.png">
+
+
       <br>
+function setup() {
+
+   
+    let canvas = createCanvas(800, 800)
+    // canvas.parent('p5container') 
+    capture = createCapture();
+  capture.hide()
+}
+
+
+function draw(){
+
+ background(capture.get())
+
+  for (var x = 0; x < width; x+=200){
+
+  for (var y = 0; y < width; y+=200){
+
+    drawFlower(x,y,(x*y)/2)
+
+    
+  }
+
+
+  }
+
+
+
+}
+
+function drawFlower(posX,posY,r){
+
+  
+ 
+  let numPetals = 24
+  let angle = TWO_PI/numPetals
+  let innerRadius = 31
+
+  push()
+
+  translate(posX, posY)
+  rotate(frameCount/25)
+
+  let scl = sin(millis()/20000+(posX+posY+r)/4)*1
+
+  scale(scl)
+
+  circle(r,r,innerRadius)
+
+  for (var r = 0; r < TWO_PI; r+=angle){
+
+    push()
+    fill('pink')
+    rotate(r)
+    ellipse(0,innerRadius,25,100)
+    pop()
+
+
+
+  }
+<br>
 
 <p><a href="index.html" > HOMEPAGE </a></p>

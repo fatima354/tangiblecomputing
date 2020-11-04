@@ -93,6 +93,140 @@ p{background-color:rgba(255,255,255,0.5);
 	font-size: 40px;
 	  }
 
+.proj1{	color: #000000;
+ position: absolute;
+	margin-top: 3150px;
+	margin-left:2200px;
+	left:70px;
+	transform: translate(-50%,-50%);
+	font-size: 40px;
 
+}
+
+.code1{	color: #000000;
+ position: absolute;
+	margin-top: 6000px;
+	margin-left:2200px;
+	left:70px;
+	transform: translate(-50%,-50%);
+	font-size: 40px;
+
+}
+
+.code2{	color: #000000;
+ position: absolute;
+	margin-top: 6700px;
+	margin-left:2200px;
+	left:70px;
+	transform: translate(-50%,-50%);
+	font-size: 40px;
+
+}
+
+.code3{	color: #000000;
+ position: absolute;
+	margin-top: 7300px;
+	margin-left:2200px;
+	left:70px;
+	transform: translate(-50%,-50%);
+	font-size: 40px;
+
+}
+
+.code4{	color: #000000;
+ position: absolute;
+	margin-top: 8100px;
+	margin-left:2200px;
+	left:70px;
+	transform: translate(-50%,-50%);
+	font-size: 40px;
+
+}
+
+.code5{	color: #000000;
+ position: absolute;
+	margin-top: 8690px;
+	margin-left:2200px;
+	left:70px;
+	transform: translate(-50%,-50%);
+	font-size: 40px;
+
+}
+
+.code6{	color: #000000;
+ position: absolute;
+	margin-top: 9200px;
+	margin-left:2200px;
+	left:70px;
+	transform: translate(-50%,-50%);
+	font-size: 40px;
+
+}
+
+.code7{	color: #000000;
+ position: absolute;
+	margin-top: 10100px;
+	margin-left:2200px;
+	left:70px;
+	transform: translate(-50%,-50%);
+	font-size: 40px;
+
+}
+.code8{	color: #000000;
+ position: absolute;
+	margin-top: 10870px;
+	margin-left:2200px;
+	left:70px;
+	transform: translate(-50%,-50%);
+	font-size: 40px;
+
+}
+.code9{	color: #000000;
+ position: absolute;
+	margin-top: 11870px;
+	margin-left:2200px;
+	left:70px;
+	transform: translate(-50%,-50%);
+	font-size: 40px;
+
+}
+.code10{	color: #000000;
+ position: absolute;
+	margin-top: 12870px;
+	margin-left:2260px;
+	left:70px;
+	transform: translate(-50%,-50%);
+	font-size: 40px;
+
+}
+
+.code11{	color: #000000;
+ position: absolute;
+	margin-top: 13600px;
+	margin-left:2199px;
+	left:70px;
+	transform: translate(-50%,-50%);
+	font-size: 40px;
+}
+
+.code12{	color: #000000;
+ position: absolute;
+	margin-top: 15000px;
+	margin-left:2140px;
+	left:70px;
+	transform: translate(-50%,-50%);
+	font-size: 40px;
+}
+
+
+#videobox {
+display: block;
+height: 1000%;
+left: 25%;
+position: absolute;
+top: 1000%;
+width: 1000%;
+
+}
 
 }

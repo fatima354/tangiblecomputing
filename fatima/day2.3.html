@@ -20,15 +20,32 @@
     <div>
       <h2> MuW201 Tangible Computing</h2>
       <img style="width: 19%" src="blank.png"><img style="width: 19%" src="butterfly2.png"><img style="width: 19%" src="blank.png"> <img style="width: 19%" src="butterfly2.png"><img style="width: 19%" src="blank.png"> 
-      <hr>
+   
       <br>
       
       <h2>  Fatima_Alhalyan  </h2>
 <hr>
       <br>
-<iframe src="https://www.openprocessing.org/sketch/984335/embed/?plusEmbedHash=ZTBlZDIxNmEyMDI3YzBkYWQ5NjZjYjY2ZjJlMThkZGI2ZjE2MzgzNzI0YzUyOTk5OTExNjg0ZTNkM2U2YmFiNDM4NGUxZTljYjlmNDFjMjEzN2UxNDY5YjEzMzcyMTY2NjYwNjUwNjNmMjMwYTJhODc0MzhiNGU1NTQ0MGY1ZTNKRWdFOE16citJbnZUUDNSczl2eDJCREZwdzVuRnhwOWJKZzRKa1VZcHJ5d2hGK2dYMjA0TjcwLzQxblZlQVdYSFNRZ0xSUHR6azk0RkhiMjQ5RGIzUT09&plusEmbedTitle=true" width="800" height="700"></iframe>
 
-<hr>
+check it out for yourself! <a href="https://www.openprocessing.org/sketch/984335">link text</a>
+<br>
+<img style="width: 19.9%" src="simplefilter.png"> 
+<img style="width: 24.3%" src="simplefilter2.png">
+
+
       <br>
+      var video;
+function setup() { 
+ createCanvas(320,240); 
+  background(51);
+ video = createCapture(VIDEO);
+    video.size(320,240); 
+video.hide();}
+    
+function draw() { 
+    tint('hotpink')
+    image(video,mouseX,0);
+}
+<br>
 
 <p><a href="index.html" > HOMEPAGE </a></p>
