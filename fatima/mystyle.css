@@ -212,7 +212,7 @@ p{background-color:rgba(255,255,255,0.5);
 .code12{	color: #000000;
  position: absolute;
 	margin-top: 15000px;
-	margin-left:2140px;
+	margin-left:2279px;
 	left:70px;
 	transform: translate(-50%,-50%);
 	font-size: 40px;
@@ -221,12 +221,21 @@ p{background-color:rgba(255,255,255,0.5);
 
 #videobox {
 display: block;
-height: 1000%;
+height: 15000%;
 left: 25%;
 position: absolute;
-top: 1000%;
-width: 1000%;
+top: 900%;
+width: 15000%;
 
+}
+
+.RESOURCES{	color: #000000;
+ position: absolute;
+	margin-top: 16600px;
+	margin-left:2070px;
+	left:70px;
+	transform: translate(-50%,-50%);
+	font-size: 40px;
 }
 
 }
