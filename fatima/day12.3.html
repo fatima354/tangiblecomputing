@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> fatimas website </title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:ital,wght@0,300;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mystyle.css">
+
+
+
+      
+  
+<body style="background-color:powderblue;">
+
+</body>
+
+    
+  </head>
+  <body>
+
+    <div>
+      <h2> MuW201 Tangible Computing</h2>
+      <img style="width: 19%" src="blank.png"><img style="width: 19%" src="butterfly2.png"><img style="width: 19%" src="blank.png"> <img style="width: 19%" src="butterfly2.png"><img style="width: 19%" src="blank.png"> 
+   
+      <br>
+      
+      <h2>  Fatima_Alhalyan  </h2>
+<hr>
+      <br>
+
+check it out for yourself! <a href="https://editor.p5js.org/tambotams/sketches/-OdvjQyYn">link text</a>
+<br>
+<img style="width: 24.2%" src=".png"> 
+<img style="width: 18.4%" src="flowerscreenshots2.png">
+
+
+      <br>
+ 
+let video;
+let poseNet;
+let pose;
+let skeleton;
+let imgNet
+let imgButterfly
+let imgFrame
+let imgCloud
+let wrist
+let fairies = []
+let numFairy = 70
+let imgFlower
+//var song;
+
+
+function setup() {
+  createCanvas(640, 480);
+  video = createCapture(VIDEO);
+  video.hide();
+  poseNet = ml5.poseNet(video,modelLoaded);
+  poseNet.on('pose',gotPoses)
+  song.play();
+
+  
+  for (var i = 0; i < numFairy; i++ ){ 
+    
+    let newFairy = createFairy(imgNet)
+    fairies.push(newFairy)
+  
+  
+  }
+  
+}
+
+function createFairy(img){
+  
+  let obj = {}
+  obj.img = img 
+  obj.x = random(width)
+  obj.y = random(height)
+  obj.xoff = random()
+  obj.yoff = random()
+  
+  obj.move = function(){
+    
+    // console.log('move')
+    
+    this.xoff += 0.01 
+    this.yoff += 0.01
+    
+    this.x = noise(this.xoff)*width
+    this.y = noise(this.yoff)*height
+    
+  }
+  
+  obj.display = function(){ 
+    
+    push()
+    
+    translate(this.x, this.y)
+    image(imgButterfly,0,0,40,40);
+    pop()
+  
+  }
+  
+  obj.eat = function(v){
+    
+    let d = dist(this.x, this.y, v.x, v.y)
+    
+    if (d < 200 ){
+      
+      this.x = 0
+      this.y = 0
+      
+      
+      
+      
+    }
+    
+  }
+  
+  obj.update = function(v){
+    
+    this.move()
+    this.eat(v)
+    this.display()
+    
+    
+  }
+  
+  return obj
+  
+
+}
+
+function gotPoses(poses){
+  //console.log(poses);
+  if (poses.length>0){
+    pose = poses[0].pose;
+    skeleton = poses[0].skeleton
+  }
+}
+
+
+
+function modelLoaded(){
+  console.log('poseNet ready');
+}
+
+function preload(){
+  song = loadSound("Nice Boys Temporex instrumental Karaoke No Vocals.mp3"); 
+  imgNet=loadImage('net.png')
+  wrist = createVector(0, 0, 0);
+  imgButterfly=loadImage('f3.PNG')
+  imgFrame=loadImage('flowframe.png')
+  imgCloud=loadImage('cloud1.png')
+  imgFlower=loadImage('flower.png')
+  
+}
+
+
+function draw() { 
+  
+  image(video,0,0)
+  image(imgFrame,-120,-280,800,800);
+image(imgCloud,300,250,600,300);
+  image(imgCloud,-100,400,600,300);
+  image(imgFlower,-70,-159,300,300)
+  
+  if (pose) {
+    let eyeR = pose.rightEye;
+    let eyeL= pose.leftEye;
+    let d = dist(eyeR.x,eyeR.y,eyeL.x,eyeL.y);
+    
+    //image(pose.nose.x,pose.nose.y,d);
+    
+    wrist.lerp(pose.rightWrist.x,pose.rightWrist.y,0,0.1);
+    
+    
+    fairies.forEach(fairy => fairy.update(wrist))
+    
+    drawItem(imgNet,wrist,300,300)
+  
+  }
+
+}
+
+
+function drawItem(img,vec,w,h){
+  push()
+  translate(vec.x-w/2,vec.y-h/2)
+  fill('red')
+
+  image(img,0,0,w,h);
+  pop()
+  
+}
+<br>
+
+<p><a href="index.html" > HOMEPAGE </a></p>
